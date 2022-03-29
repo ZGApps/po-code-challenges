@@ -15,8 +15,6 @@ public class LockerProblem {
 //		countOpen(lockers);
 //		solveProblem(lockers);
 //		countOpen(lockers);
-//		
-//		
 		
 		//HashMap Version
 		HashMap<Integer, Boolean> lockers = new HashMap<Integer, Boolean>();
@@ -37,7 +35,7 @@ public class LockerProblem {
 //		
 //		for(int i = 0; i<100; i++) {
 //			for(int l = 0; l<100; l++) {
-//				if((i+1)%(l+1) == 0) {
+//				if((l+1)%(i+1) == 0) {
 //					input[l] = !input[l];
 //				}
 //			}
@@ -70,7 +68,7 @@ public class LockerProblem {
 	public static void solveProblem(HashMap<Integer, Boolean> input) {
 		for(int c=1; c<=100; c++) {
 			for(int l : input.keySet()) {
-				if(c%l == 0) {
+				if(l%c == 0) {
 
 					input.put(l, !input.get(l)); 
 				}
